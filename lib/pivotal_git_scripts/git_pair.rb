@@ -140,7 +140,7 @@ BANNER
 
         pairs_file_path = candidate_directories.
           map { |d| File.join(d, ".pairs") }.
-          find { |f| File.exists? f }
+          find { |f| File.exist? f }
 
         unless pairs_file_path
           raise GitPairException, <<-INSTRUCTIONS
